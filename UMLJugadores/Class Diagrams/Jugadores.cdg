@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Jugadores">
+  <ClassDiagramComponents>
+    <Class name="Nodo" package="" visibility="public" xPosition="732.0" yPosition="80.0">
+      <Fields>
+        <Field name="valor" type="Object" visibility="private"/>
+        <Field name="sgte" type="Nodo" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Object" name="valor"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="setValor" returnType="Object" visibility="public">
+          <Argument type="Object" name="valor"/>
+        </Method>
+        <Method name="setSgte" returnType="Nodo" visibility="public">
+          <Argument type="Nodo" name="sgte"/>
+        </Method>
+        <Method name="getValor" returnType="Object" visibility="public"/>
+        <Method name="getSgte" returnType="Nodo" visibility="public"/>
+        <Method name="EnlazarSiguiente" returnType="Nodo" visibility="public">
+          <Argument type="Nodo" name="n"/>
+        </Method>
+        <Method name="ObtenerSiguiente" returnType="Nodo" visibility="public"/>
+        <Method name="ObtenerValor" returnType="Object" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="Conjunto" package="" visibility="public" xPosition="21.0" yPosition="18.0">
+      <Methods>
+        <Method name="AddPrimero" returnType="Object" visibility="public">
+          <Argument type="Object" name="elemento"/>
+        </Method>
+        <Method name="Vacio" returnType="boolean" visibility="public"/>
+        <Method name="Obtener" returnType="int" visibility="public">
+          <Argument type="int" name="i"/>
+        </Method>
+        <Method name="EliminarPrimero" returnType="void" visibility="public"/>
+        <Method name="Eliminar" returnType="int" visibility="public">
+          <Argument type="int" name="i"/>
+        </Method>
+        <Method name="Imprimir" returnType="void" visibility="public"/>
+        <Method name="Buscar" returnType="Object" visibility="public">
+          <Argument type="Object" name="elemento"/>
+        </Method>
+        <Method name="QuickSort" returnType="void" visibility="public"/>
+      </Methods>
+    </Interface>
+    <Class name="Jugadores" package="" visibility="public" xPosition="21.0" yPosition="353.0">
+      <Fields>
+        <Field name="Cabeza" type="Nodo" visibility="private"/>
+        <Field name="Tam" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="setCabeza" returnType="Nodo" visibility="public">
+          <Argument type="Nodo" name="c"/>
+        </Method>
+        <Method name="setTam" returnType="int" visibility="public">
+          <Argument type="int" name="t"/>
+        </Method>
+        <Method name="getCabeza" returnType="Nodo" visibility="public"/>
+        <Method name="getTam" returnType="int" visibility="public"/>
+        <Method name="AddPrimero" returnType="Object" visibility="public">
+          <Argument type="Object" name="elemento"/>
+        </Method>
+        <Method name="Vacio" returnType="boolean" visibility="public"/>
+        <Method name="Obtener" returnType="int" visibility="public">
+          <Argument type="int" name="i"/>
+        </Method>
+        <Method name="EliminarPrimero" returnType="void" visibility="public"/>
+        <Method name="Eliminar" returnType="int" visibility="public">
+          <Argument type="int" name="i"/>
+        </Method>
+        <Method name="Imprimir" returnType="void" visibility="public"/>
+        <Method name="Buscar" returnType="Object" visibility="public">
+          <Argument type="Object" name="elemento"/>
+        </Method>
+        <Method name="QuickSort" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Jugador" package="" visibility="public" xPosition="432.0" yPosition="510.0">
+      <Fields>
+        <Field name="Nombres" type="String" visibility="private"/>
+        <Field name="Apellidos" type="String" visibility="private"/>
+        <Field name="Edad" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="n"/>
+          <Argument type="String" name="a"/>
+          <Argument type="int" name="e"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="setNombres" returnType="String" visibility="public">
+          <Argument type="String" name="n"/>
+        </Method>
+        <Method name="setApellidos" returnType="String" visibility="public">
+          <Argument type="String" name="a"/>
+        </Method>
+        <Method name="setEdad" returnType="int" visibility="public">
+          <Argument type="int" name="e"/>
+        </Method>
+        <Method name="getNombres" returnType="String" visibility="public"/>
+        <Method name="getApellidos" returnType="String" visibility="public"/>
+        <Method name="getEdad" returnType="int" visibility="public"/>
+        <Method name="Leer" returnType="void" visibility="public"/>
+        <Method name="toString" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="mainJugadores" package="" visibility="public" xPosition="417.0" yPosition="68.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="sgte" source="Nodo" target="Nodo" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Jugadores" target="Conjunto"/>
+    <UseRelation name="" source="Nodo" target="Jugador" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="Uso" source="Jugadores" target="Jugador" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="ListaEnlazada" source="Jugadores" target="Nodo" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
