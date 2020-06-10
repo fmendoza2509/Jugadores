@@ -1,3 +1,4 @@
+package Jugadores;
 public class Jugadores implements Conjunto {
 
     private Nodo Cabeza;

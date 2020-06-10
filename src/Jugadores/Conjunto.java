@@ -1,3 +1,4 @@
+package Jugadores;
 public interface Conjunto {
 
     public Object AddPrimero(Object elemento);

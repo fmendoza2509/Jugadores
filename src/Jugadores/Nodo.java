@@ -1,41 +1,38 @@
-public class Jugador {
+package Jugadores;
+public class Nodo {
 
-    private String Nombres;
+    private Object valor;
 
-    private String Apellidos;
+    private Nodo sgte;
 
-    private int Edad;
-
-    public Jugador(String n, String a, int e) {
+    public Nodo(Object valor) {
     }
 
-    public String setNombres(String n) {
+    public Object setValor(Object valor) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
-    public String setApellidos(String a) {
+    public Nodo setSgte(Nodo sgte) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
-    public int setEdad(int e) {
+    public Object getValor() {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
-    public String getNombres() {
+    public Nodo getSgte() {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
-    public String getApellidos() {
+    public Nodo EnlazarSiguiente(Nodo n) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
-    public int getEdad() {
+    public Nodo ObtenerSiguiente() {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
-    public void Leer() {
-    }
-
-    public void toString() {
+    public Object ObtenerValor() {
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 }
