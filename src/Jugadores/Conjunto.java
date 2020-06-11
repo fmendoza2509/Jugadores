@@ -1,20 +1,9 @@
 package Jugadores;
 
 public interface Conjunto {
-    
-    public Object AddPrimero(Object elemento);
-
-    public boolean Vacio();
-
-    public int Obtener(int i);
-
-    public void EliminarPrimero();
-
+    public boolean InsertarDato(String Nombres,String Apellidos,int Edad,int codigo);
+    public boolean EncontrarDato(int dato);
     public int Eliminar(int i);
-
     public void Imprimir();
-
-    public Object Buscar(Object elemento);
-
-    public void QuickSort();
+    public boolean Buscar(Object elemento);
 }
