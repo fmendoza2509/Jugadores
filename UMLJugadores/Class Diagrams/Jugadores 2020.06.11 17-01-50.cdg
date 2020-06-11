@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Jugadores">
+  <ClassDiagramComponents>
+    <Class name="Jugadores" package="Jugadores" visibility="public" xPosition="75.0" yPosition="395.0">
+      <Fields>
+        <Field name="Cabeza" type="Nodo" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="setCabeza" returnType="void" visibility="public">
+          <Argument type="Nodo" name="Cabeza"/>
+        </Method>
+        <Method name="getCabeza" returnType="Nodo" visibility="public"/>
+        <Method name="InsertarDato" returnType="boolean" visibility="public">
+          <Argument type="String" name="n"/>
+          <Argument type="String" name="a"/>
+          <Argument type="int" name="e"/>
+          <Argument type="int" name="codigo"/>
+        </Method>
+        <Method name="EncontrarDato" returnType="boolean" visibility="public">
+          <Argument type="int" name="codigo"/>
+        </Method>
+        <Method name="Eliminar" returnType="int" visibility="public">
+          <Argument type="int" name="i"/>
+        </Method>
+        <Method name="Imprimir" returnType="void" visibility="public"/>
+        <Method name="Buscar" returnType="boolean" visibility="public">
+          <Argument type="int" name="codigo"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="mainJugadores" package="Jugadores" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Nodo" package="Jugadores" visibility="public" xPosition="590.0" yPosition="250.0">
+      <Fields>
+        <Field name="Nombres" type="String" visibility="private"/>
+        <Field name="Apellidos" type="String" visibility="private"/>
+        <Field name="Edad" type="int" visibility="private"/>
+        <Field name="codigo" type="int" visibility="private"/>
+        <Field name="sgte" type="Nodo" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="setSgte" returnType="void" visibility="public">
+          <Argument type="Nodo" name="sgte"/>
+        </Method>
+        <Method name="setNombres" returnType="void" visibility="public">
+          <Argument type="String" name="Nombres"/>
+        </Method>
+        <Method name="setApellidos" returnType="void" visibility="public">
+          <Argument type="String" name="Apellidos"/>
+        </Method>
+        <Method name="setEdad" returnType="void" visibility="public">
+          <Argument type="int" name="Edad"/>
+        </Method>
+        <Method name="setCodigo" returnType="void" visibility="public">
+          <Argument type="int" name="codigo"/>
+        </Method>
+        <Method name="getSgte" returnType="Nodo" visibility="public"/>
+        <Method name="getNombres" returnType="String" visibility="public"/>
+        <Method name="getApellidos" returnType="String" visibility="public"/>
+        <Method name="getEdad" returnType="int" visibility="public"/>
+        <Method name="getCodigo" returnType="int" visibility="public"/>
+        <Method name="EnlazarSiguiente" returnType="void" visibility="public">
+          <Argument type="Nodo" name="n"/>
+        </Method>
+        <Method name="ObtenerSiguiente" returnType="Nodo" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="Conjunto" package="Jugadores" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Methods>
+        <Method name="InsertarDato" returnType="boolean" visibility="public">
+          <Argument type="String" name="Nombres"/>
+          <Argument type="String" name="Apellidos"/>
+          <Argument type="int" name="Edad"/>
+          <Argument type="int" name="codigo"/>
+        </Method>
+        <Method name="EncontrarDato" returnType="boolean" visibility="public">
+          <Argument type="int" name="dato"/>
+        </Method>
+        <Method name="Eliminar" returnType="int" visibility="public">
+          <Argument type="int" name="i"/>
+        </Method>
+        <Method name="Imprimir" returnType="void" visibility="public"/>
+        <Method name="Buscar" returnType="boolean" visibility="public">
+          <Argument type="int" name="codigo"/>
+        </Method>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="sgte" source="Jugadores.Nodo" target="Jugadores.Nodo" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Jugadores.Jugadores" target="Jugadores.Nodo" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Jugadores.Nodo" target="Jugadores.Nodo" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="Cabeza" source="Jugadores.Jugadores" target="Jugadores.Nodo" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Jugadores.Jugadores" target="Jugadores.Conjunto"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

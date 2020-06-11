@@ -13,7 +13,9 @@ public class Jugadores implements Conjunto {
     public Nodo getCabeza() {
         return Cabeza;
     }
-
+    //Método para insertar los datos de manera ordenada
+    //Realizado por Franklin Mendoza
+    //Requerimiento funcional
     @Override
     public boolean InsertarDato(String n,String a,int e,int codigo) {
         if(!EncontrarDato(codigo)){//Si no encontramos el datos
@@ -49,7 +51,9 @@ public class Jugadores implements Conjunto {
             return false;
         }
     }
-
+    //Requerimiento funcional
+    //Método para saber si el elemento existe en la lista
+    //Realizado por Joao Barrionuevo
     @Override
     public boolean EncontrarDato(int codigo) {
         Nodo aux = getCabeza();//creamos un nodo auxiliar qye nos permitira recorrer la lista
@@ -61,12 +65,24 @@ public class Jugadores implements Conjunto {
         }
         return false;//si retorna falso es que no encuentró nada
     }
-
+    //Método para eliminar cualquier elemento de la lista
+    //Requerimiento funcional
+    //Realizado por Joao Barrionuevo
     @Override
-    public int Eliminar(int i) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public boolean Eliminar(int i) {
+        Nodo aux = getCabeza();
+        while(aux != null){
+            if(EncontrarDato(i)){
+                aux = aux.ObtenerSiguiente();
+                return true;
+            }
+            aux.EnlazarSiguiente(aux.ObtenerSiguiente().ObtenerSiguiente());
+        }
+        return false;
     }
-
+    //Método para imprimir los datos de la lista
+    //Requerimiento no funcional
+    //Realizado por Franklin Mendoza
     @Override
     public void Imprimir() {
         Nodo aux = getCabeza();
@@ -77,10 +93,4 @@ public class Jugadores implements Conjunto {
             aux =aux.getSgte();
         }
     }
-
-    @Override
-    public boolean Buscar(Object elemento) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
 }
