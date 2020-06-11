@@ -37,6 +37,7 @@ public class Jugador {
     public void Leer() {
     }
 
-    public void toString() {
+    public String toString() {
+        return getNombres()+getApellidos()+getEdad();
     }
 }

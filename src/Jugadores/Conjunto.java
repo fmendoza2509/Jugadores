@@ -1,6 +1,7 @@
 package Jugadores;
-public interface Conjunto {
 
+public interface Conjunto {
+    
     public Object AddPrimero(Object elemento);
 
     public boolean Vacio();

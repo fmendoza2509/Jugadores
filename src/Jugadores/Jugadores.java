@@ -7,49 +7,44 @@ public class Jugadores implements Conjunto {
 
     public Jugadores() {
     }
-
-    public Nodo setCabeza(Nodo c) {
-        throw new UnsupportedOperationException("Not supported yet.");
+    //Métodos Setter
+    public void setCabeza(Nodo c) {
+        this.Cabeza = c;
     }
-
-    public int setTam(int t) {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public void setTam(int t) {
+        this.Tam = t;
     }
-
+    //Métodos Getter
     public Nodo getCabeza() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return Cabeza;
     }
-
     public int getTam() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return Tam;
     }
-
+    //Método para agregar el primer elemento a la laista
     public Object AddPrimero(Object elemento) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        
     }
-
+    //Método para saber si esta vacia la lista
     public boolean Vacio() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        
     }
-
+    //Método para obtener la referencia al siguiente
     public int Obtener(int i) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        
     }
-
+    //Método para eliminar el primer elemento de la lista
     public void EliminarPrimero() {
     }
-
+    //Método para eliminar cualquier nodo de la lista
     public int Eliminar(int i) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        
     }
-
+    //Método para imprimir
     public void Imprimir() {
     }
-
+    //Méetodo para poder imprimir la informacion del nodo
     public Object Buscar(Object elemento) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    public void QuickSort() {
+        
     }
 }
