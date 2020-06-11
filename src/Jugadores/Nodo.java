@@ -2,37 +2,38 @@ package Jugadores;
 public class Nodo {
 
     private Object valor;
-
     private Nodo sgte;
 
     public Nodo(Object valor) {
+        setValor(valor);
+        setSgte(null);
     }
 
-    public Object setValor(Object valor) {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public void setValor(Object valor) {
+        this.valor = valor;
     }
 
-    public Nodo setSgte(Nodo sgte) {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public void setSgte(Nodo sgte) {
+        this.sgte = sgte;
     }
 
     public Object getValor() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return valor;
     }
 
     public Nodo getSgte() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return sgte;
     }
 
-    public Nodo EnlazarSiguiente(Nodo n) {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public void EnlazarSiguiente(Nodo n) {
+        setSgte(n);
     }
 
     public Nodo ObtenerSiguiente() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return getSgte();
     }
 
     public Object ObtenerValor() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return getValor();
     }
 }
