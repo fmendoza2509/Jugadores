@@ -1,43 +1,55 @@
 package Jugadores;
+
+import java.util.Scanner;
+
 public class Jugador {
-
+    private Scanner lector = new Scanner(System.in);
     private String Nombres;
-
     private String Apellidos;
-
     private int Edad;
 
-    public Jugador(String n, String a, int e) {
+    public Jugador() {
+        setNombres("");
+        setApellidos("");
+        setEdad(0);
     }
-
-    public String setNombres(String n) {
-        throw new UnsupportedOperationException("Not supported yet.");
+    //Constructor Sobrecargado
+    public Jugador(String n, String a, int e){
+        setNombres(n);
+        setApellidos(a);
+        setEdad(e);
     }
-
-    public String setApellidos(String a) {
-        throw new UnsupportedOperationException("Not supported yet.");
+    //Métodos Setters
+    public void setNombres(String n){
+        this.Nombres = n;
     }
-
-    public int setEdad(int e) {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public void setApellidos(String a){
+        this.Apellidos = a;
     }
-
-    public String getNombres() {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public void setEdad(int e){
+        this.Edad = e;
     }
-
-    public String getApellidos() {
-        throw new UnsupportedOperationException("Not supported yet.");
+    //Métodos Getters
+    public String getNombres(){
+        return Nombres;
     }
-
+    public String getApellidos(){
+        return Apellidos;
+    }
     public int getEdad() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return Edad;
     }
-
-    public void Leer() {
+    //Método para leer los datos
+    public void Leer(){
+        System.out.println("Ingrese los nombres del jugador");
+        setNombres(lector.nextLine());
+        System.out.println("Ingrese los Apellidos del jugador");
+        setApellidos(lector.nextLine());
+        System.out.println("Ingre la edad del jugador");
+        setEdad(lector.nextInt());
     }
 
     public String toString() {
-        return getNombres()+getApellidos()+getEdad();
+        return "Nombres: "+getNombres()+"\nApellidos: "+getApellidos()+"\nEdad: "+getEdad();
     }
 }
