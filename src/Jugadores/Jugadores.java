@@ -2,7 +2,6 @@ package Jugadores;
 public class Jugadores implements Conjunto {
 
     private Nodo Cabeza;
-
     private int Tam;
 
     public Jugadores() {
@@ -22,12 +21,12 @@ public class Jugadores implements Conjunto {
         return Tam;
     }
     //Método para agregar el primer elemento a la laista
-    public Object AddPrimero(Object elemento) {
-        
+    public void AddPrimero(Object elemento) {
+       
     }
     //Método para saber si esta vacia la lista
     public boolean Vacio() {
-        
+        return false;
     }
     //Método para obtener la referencia al siguiente
     public int Obtener(int i) {
